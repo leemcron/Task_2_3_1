@@ -16,20 +16,32 @@ public class User {
     @Column(name = "last_name")
     private String lastname;
 
+    @Column(name = "email")
+    private String email;
+
     public User() {
     }
 
-    public User(String name, String lastname) {
+    public User(String name, String lastname, String email) {
         this.name = name;
         this.lastname = lastname;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 

@@ -49,7 +49,7 @@ public class UserController {
     @GetMapping(value = "/user-update/{id}")
     public String updateUserForm(@PathVariable("id")Long id, Model model) {
         User user = userService.getUserById(id);
-        model.addAttribute("user", user.getId());
+        model.addAttribute("user", user);
         return "/user-update";
     }
 

@@ -8,8 +8,10 @@
 <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
     <label for="name">First name</label>
     <input type="text" th:field="*{name}" id="name" placeholder="Name">
-    <label for="lastName">Last name</label>
-    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
+    <br/>
+    <label for="lastname">Last name</label>
+    <input type="text" th:field="*{lastname}" id="lastname" placeholder="Last Name">
+    <br/>
     <input type="submit" value="Create User">
 </form>
 </body>

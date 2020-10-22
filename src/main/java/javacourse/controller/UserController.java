@@ -3,6 +3,7 @@ package javacourse.controller;
 import javacourse.model.User;
 import javacourse.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -17,9 +18,13 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    @Autowired
+
     UserService userService;
 
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping(value = "/users")
     public String listUsers(Model model) {
